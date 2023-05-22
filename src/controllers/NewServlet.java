@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import models.Message;
 
-
 /**
  * Servlet implementation class NewServlet
  */
@@ -24,7 +23,6 @@ public class NewServlet extends HttpServlet {
      */
     public NewServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
     /**

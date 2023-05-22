@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import models.Message;
 import utils.DBUtil;
+
 /**
  * Servlet implementation class EditServlet
  */
@@ -24,7 +25,6 @@ public class EditServlet extends HttpServlet {
      */
     public EditServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
     /**
@@ -43,11 +43,10 @@ public class EditServlet extends HttpServlet {
         request.setAttribute("_token", request.getSession().getId());
 
         // メッセージIDをセッションスコープに登録
-        if(m!=null) {
+        if(m != null) {
         request.getSession().setAttribute("message_id", m.getId());
         }
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/messages/edit.jsp");
         rd.forward(request, response);
     }
-
 }
