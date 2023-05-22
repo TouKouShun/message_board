@@ -8,7 +8,12 @@
             <c:import url="_form.jsp" />
         </form>
 
-        <p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a></p>
-
+        <script>
+        function confirmDestroy() {
+            if(confirm("本当に削除してよろしいですか？")) {
+                document.forms[1].submit();
+            }
+        }
+        </script>
     </c:param>
 </c:import>
